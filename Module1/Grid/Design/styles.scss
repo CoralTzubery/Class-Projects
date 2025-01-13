@@ -1,0 +1,62 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+ul, ol, menu {
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+html, body, main {
+    height: 100%;
+}
+
+html {
+    font-size: 1.2rem;
+}
+
+body {
+    font-family: system-ui;
+    line-height: 1.5;
+    color: hsl(0deg 0% 5%);
+
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+header {
+    display: grid;
+    grid-template-columns: 50% 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.nav-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    li {
+        background-color: white;
+        border-radius: 50%;
+
+        img {
+            max-width: 100%;
+            max-height: auto;
+        }
+    }
+
+    
+}

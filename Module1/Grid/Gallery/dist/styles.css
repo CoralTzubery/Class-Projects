@@ -1,0 +1,88 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+ul, ol, menu {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+html, body, main {
+  height: 100%;
+}
+
+html {
+  font-size: 1.2rem;
+}
+
+body {
+  font-family: system-ui;
+  line-height: 1.5;
+  color: #0d0d0d;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.site-nav {
+  background: #f2f2f2;
+  padding: 0.5rem 1rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+}
+.site-nav menu {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.brand {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.card img {
+  max-width: 100%;
+  max-height: auto;
+}
+.card p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.reading-view {
+  width: min(70ch, 100% - 2rem);
+  margin-inline: auto;
+}
+.reading-view > p + p {
+  margin-block-start: 1rem;
+}
+
+aside {
+  margin-block: 1rem;
+  border: 1px solid currentColor;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
