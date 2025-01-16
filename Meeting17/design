@@ -1,0 +1,16 @@
+// Text based adventure game
+// Locations and navigation - show description of current location and available options
+// End game states - get to certain state/goal to win, or run into "trouble" and loose
+// Inventory - track items in the user's possession and their state, allow using and dropping items, (limit invnetory size?)
+
+נעשה כמה פונקציות:
+
+לטובת Inventory: 
+אם המשתמש מכניס קלט של סטטוס פריטים נציג לו את הפריטים שהוא השיג
+ניתן למשתמש אופציות להשתמש/לזרוק פריט. 
+
+end game state:
+נציג מצב/מטרה כדי לנצח. במידה והמשתמש נכנס לצרות נדאג שהוא יפסיד.
+
+לטובת ניווט ומיקום:
+ניתן התראה מה מצבו הנוכחי, באיזה שלב במשחק הוא נמצא ומה האופציות שפרוסות לפניו - לבדוק סטטוס של הפריטים, לעבור שלב, להפסיק לשחק וכו׳<div class=""></div>
