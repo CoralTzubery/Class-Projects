@@ -1,16 +1,17 @@
-let max = Number(prompt("number #1"));
+//printing the second max number.
 
-// i = i + 1
-// i += 1
-// i++
-// ++i
+let max = Infinity;
+let secondMax = -Infinity; 
 
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < 5; i++) {
     const nextNumber  = Number(prompt("number #" + (i + 2)));
 
     if (nextNumber > max) {
+        secondMax = max;
         max = nextNumber;
+    } else if(nextNumber >secondMax) {
+        secondMax = nextNumber;
     }
 }
 
-alert(max);
+alert(secondMax);
