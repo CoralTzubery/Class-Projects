@@ -3,9 +3,24 @@
 // forms
 // manage array of objects
 // relation to other objects
-function loanEmquipment(employee, equipment, amount) {
+// API
+const itemsStorageKey = "items";
+let items = JSON.parse(localStorage.getItem(itemsStorageKey)) ?? [];
+let stock = [];
+let inventory = [];
+export function getItems() {
+    return items.slice();
 }
-function returnLoanedEquipment(employee, equipment, amount) {
+export function addItem(item) {
+    if (items.some((i) => i.id === item.id)) {
+        return `Id "${item.id}" already exists`;
+    }
+    items.push(item);
+    localStorage.setItem(itemsStorageKey, JSON.stringify(items));
+    return "Success";
 }
-function addNewEquipment(inventory, newEquipmentName, newEquimpmentAmount, newEquipmentType) {
-}
+export function editItem(item) { }
+export function addToStock(itemId, amount) { }
+export function consume(itemId, quantity) { }
+export function acquire(itemId, serial) { }
+export function decomission(serial) { }
