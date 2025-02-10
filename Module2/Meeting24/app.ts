@@ -10,30 +10,38 @@
 // manage loaned equipment
 
 // Model
+type ConsumableItem = {
+    id: string,
+    name: string,
+    category: "Supplies",
+    description?: string,
+    priceInAgorot: number,
+};
+
+type EquipmentItem = {
+    id: string,
+    name: string,
+    category: "Furniture" | "IT",
+    description?: string,
+    priceInAgorot: number,
+};
+
+type Item = ConsumableItem | EquipmentItem;
+
+type Stock = { itemId: string, quantity: number }[];
+type Inventory = { itemId: string, serial: string }[];
 
 // API
+export let items: Item[] = [];
+export let stock: Stock = [];
+export let inventory: Inventory = [];
 
-type Inventory = {
-    equipment: string,
-    amount: number,
-    type: string,
-}
+export function addItem(item: Item) {}
 
-type Employees = {
-    name: string,
-    depatment: string,
-    loanedEmquipment: string,
-}
+export function addToStock(itemId: string, amount: number) {}
 
-function loanEmquipment(employee: Object, equipment: Object, amount: number) {
+export function consume(itemId: string, quantity: number) {}
 
-}
+export function acquire(itemId: string, serial: string) {}
 
-function returnLoanedEquipment(employee: Object, equipment: Object, amount: number){
-
-}
-
-function addNewEquipment(inventory: string[], newEquipmentName: string, newEquimpmentAmount: number, newEquipmentType: string) {
-
-}
-
+export function decomission(serial: string) {}
